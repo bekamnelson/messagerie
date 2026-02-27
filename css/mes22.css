@@ -37,7 +37,7 @@
         }
 
         .contact {
-           
+             background: #f9f9f9;
             padding: 8px;
             border-bottom: 1px solid #f1f1f1;
             cursor: pointer;
@@ -85,7 +85,7 @@
         .messages2{
             flex: 1;
             padding: 0px 0px 40px 0px;
-            background: #f9f9f9;
+          
             overflow-y: scroll;
              display: flex;
             flex-direction: column;
@@ -110,7 +110,7 @@
         }
 
       .message.received {
-            background-color: #fff3e0;
+            background-color: white;
             align-self: flex-start; /* Aligne à gauche */
         }
 
@@ -296,4 +296,16 @@
     font-size: 10px;
     color: #777; /* Couleur du texte de l'étiquette "non lue" */
     text-align: center;
+}
+.backpicture{
+    background-image: none;
+    background-image: url(./../images/t.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#messagescont{
+    display: none;
+      background-image: url(./../images/a1.jpeg);
+      background-size: 500px;
 }

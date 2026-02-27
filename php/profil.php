@@ -54,7 +54,7 @@ $stmt1->execute();
 
     }
    
-            if (isset($_FILES['image'])) {
+            if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
     $targetDir = "./../images/"; // Répertoire de destination
     $imageFileType = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
     
@@ -105,7 +105,12 @@ $stmt1->execute();
                     unlink("./../images/".$_SESSION['images']);
                 }
              
-               
+              
+              $stmt = $conn->prepare($request1);
+$stmt->bind_param("i", $user);
+$stmt->execute();
+$result = $stmt->get_result();
+
              
                
             } else {

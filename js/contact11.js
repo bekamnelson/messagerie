@@ -47,6 +47,12 @@
         .then(data => {
             if (data.status === "success") {
               scrool  = true;
+              const cont = document.querySelectorAll('.messages');
+               cont[0].style.display="none";
+               cont[1].style.display="flex";
+
+
+
                 const img = document.getElementById('imagescontact');
                 const span = document.getElementById('zonecontact');
                  const input = document.getElementById('input-set-message');

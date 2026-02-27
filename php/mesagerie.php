@@ -23,15 +23,20 @@ $user = $_SESSION["user_id"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Messagerie - Interface</title>
    
-    <link rel="stylesheet" href="./../css/mes2.css">
+    <link rel="stylesheet" href="./../css/mes22.css">
     <link rel="stylesheet" href="./../css/csstag3.css">
+     <!--<link rel="stylesheet" href="./../css/tt.css">-->
+    
 </head>
 
 <body>
     <div id="messageDiv">Message envoyé !</div>
      <input type="hidden" value="<?= $user ?>" name="contact_id" id="jsid">
     <div class="navbar">
-        <h1>Messagerie</h1>
+       <div style="display: flex; align-items: center; gap: 10px;">
+    <img src="./../images/t.png" alt="Meurphine Logo" style="height: 50px; border-radius: 8px;">
+    <h1 class="logo-text">MEURPHINE</h1>
+</div>
         <div><a href="./contact.php">ajouter un contact</a></div>
         <div class="menu-container">
         <button class="menu-button" id="menuButton">Menu</button>
@@ -66,7 +71,7 @@ $user = $_SESSION["user_id"];
     
         </div>
 </div>
-
+<div class="messages  backpicture" ></div>
         <div class="messages" id="messagescont">
            
             <div class="contact" id="contact2">
@@ -120,7 +125,7 @@ $user = $_SESSION["user_id"];
     <script type="text/javascript" src="./../js/menu1.js"></script>
     <script type="text/javascript" src="./../js/message2.js"></script>
      <script type="text/javascript" src="./../js/sendmessage11.js"></script>
-     <script type="text/javascript" src="./../js/contact.js"></script>
+     <script type="text/javascript" src="./../js/contact11.js"></script>
     <script type="text/javascript" src="./../js/Emoji.js"></script>
       <script type="text/javascript" src="./../js/notificationmessage1.js"></script>
     <script>
