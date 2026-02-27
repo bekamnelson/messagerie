@@ -1,0 +1,259 @@
+    body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .navbar {
+            margin-top: 10px;
+            background-color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            color: #333;
+        }
+
+        .content {
+            display: flex;
+            flex: 1;
+            overflow: scroll;
+        }
+
+        .contacts {
+            width: 300px;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+            background-color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact {
+           
+            padding: 8px;
+            border-bottom: 1px solid #f1f1f1;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+          
+        }
+
+        .contact:hover {
+            background: #f4f4f4;
+        }
+        .btnsub{
+            width: 100%;
+            border-bottom: 1px solid #f1f1f1;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            background-color: white;
+             border:none;
+            border-top: 2px;
+            border-bottom: 2px;
+            box-shadow: 0px 0px 2px gray;
+        }
+
+        .contact img {
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            margin-right: 10px;
+        }
+
+        .messages {
+            flex: 1;
+            padding: 0px 0px 40px 20px;
+            background: #f9f9f9;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative; 
+           
+        }
+        .messages2{
+            flex: 1;
+            padding: 0px 0px 40px 0px;
+            background: #f9f9f9;
+            overflow-y: scroll;
+             display: flex;
+            flex-direction: column;
+           
+            position: relative; 
+            padding: 0px 50px;
+
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 300px;
+            position: relative;
+        }
+
+    .message.sent {
+            background-color: #e1f5fe;
+            margin-left: auto;
+            align-self: flex-end; /* Aligne à droite */
+        }
+
+      .message.received {
+            background-color: #fff3e0;
+            align-self: flex-start; /* Aligne à gauche */
+        }
+
+
+
+
+
+        
+        .send-message {
+            display: flex;
+            flex-direction: row;
+            padding: 5px 5px 0px 5px;
+           position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-message{
+            display: flex;
+            flex-direction: row;
+            padding: 5px;
+            flex: 1;
+
+        }
+        .btn1{
+          position: relative;
+         top: 5px;
+        }
+
+        .send-message textarea {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+           
+         line-height: 1.5em;
+    width: 300px;
+    resize: vertical; /* Permet à l'utilisateur d'ajuster si besoin */
+
+    /* Hauteur minimale : 1 ligne */
+    min-height: 1.5em; 
+
+    /* Hauteur maximale : 5 lignes (1.5 * 5 = 7.5) */
+    max-height: 7.5em; 
+
+    /* Optionnel : pour un meilleur rendu */
+    padding: 8px;
+    box-sizing: border-box; /* Pour que le padding ne casse pas le calcul de hauteur */
+    overflow-y: auto;
+        }
+
+        .send-message button {
+            padding: 10px 15px;
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .send-message button:hover {
+            background-color: #2575fc;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .contacts {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+
+
+
+      .menu-container {
+            position: relative; /* Nécessaire pour la position absolue du menu */
+            display: inline-block;
+        }
+
+        .menu-button {
+            padding: 10px 15px;
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 1; /* Assure que le bouton est au-dessus du menu */
+        }
+
+        .menu-button:hover {
+            background-color: #2575fc; /* Couleur au survol */
+        }
+
+        .dropdown-menu {
+            display: none; /* Masqué par défaut */
+            position: absolute; /* Position absolue par rapport au conteneur */
+            top: 100%; /* Position à la fin du bouton */
+            left: -250px; /* Aligne le menu à gauche */
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1; /* Assure que le menu est au-dessus d'autres éléments */
+        }
+
+        .dropdown-menu a,
+        .dropdown-menu form {
+            display: block;
+            padding: 10px 15px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-menu a:hover,
+        .dropdown-menu form:hover {
+            background-color: #f4f4f4; /* Couleur au survol des liens */
+        }
+
+        .file-input {
+            margin-top: 10px; /* Espacement au-dessus du champ de fichier */
+        }
+
+        .submit-button {
+            display: none; /* Masquer le bouton de soumission */
+        }
+         #messageDiv {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50; /* Couleur verte */
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            display: none; /* Caché par défaut */
+            z-index: 1000; /* Garder visible au-dessus d'autres éléments */
+        }

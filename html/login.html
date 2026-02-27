@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Connexion</title>
+    <link rel="stylesheet" href="./../css/login.css">
+
+</head>
+<body>
+    <div class="login-container">
+        <h2>Bienvenue</h2>
+        <form action="./../php/login.php" method="post" id="signupForm">
+             <input type="email" name="email" id="emial" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <div class="footer">
+            <p>Vous n'avez pas de compte? <a href="./form.html" style="color: #6a11cb; text-decoration: none;">S'inscrire</a></p>
+        </div>
+    </div>
+        <script type="text/javascript" src="./../js/erreur2.js"></script>
+</body>
+</html>

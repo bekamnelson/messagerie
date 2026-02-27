@@ -1,0 +1,198 @@
+
+
+        .chat-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .message-row {
+            display: flex;
+            margin-bottom: 10px;
+            position: relative; /* Pour positionner le menu à l'intérieur */
+        }
+
+        .bubble {
+            background: white;
+            padding: 8px 10px;
+            border-radius: 0 8px 8px 8px;
+            box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+            max-width: 85%;
+            position: relative;
+        }
+
+        .sender-info {
+            font-size: 12.5px;
+            margin-bottom: 4px;
+        }
+
+        .name { font-weight: bold; }
+        .green { color: #075e54; }
+        .purple { color: #5e35b1; }
+        .phone { color: #8696a0; margin-left: 5px; }
+
+        .quote-box {
+            background-color: #f0f2f5;
+            border-left: 4px solid #06d755;
+            border-radius: 4px;
+            display: flex;
+            margin-bottom: 5px;
+            overflow: hidden;
+        }
+
+        .quote-content {
+            padding: 5px 10px;
+            flex-grow: 1;
+        }
+
+        .quote-name {
+            color: #06d755;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .quote-content p {
+            margin: 0;
+            font-size: 13px;
+            color: #667781;
+        }
+
+        .quote-image {
+            width: 50px;
+            background-color: #ccc; 
+            background-size: cover;
+        }
+
+        .message-content {
+            font-size: 14.5px;
+            color: #111b21;
+            padding-right: 50px;
+        }
+
+        .timestamp {
+            position: absolute;
+            bottom: 4px;
+            right: 7px;
+            font-size: 11px;
+            color: #667781;
+        }
+
+        /* Style du menu */
+        .menu {
+            display: none;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: absolute;
+            right: 0; /* Aligne à droite */
+            top: 100%; /* Positionne juste en dessous de la bulle */
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background-color: #f0f2f5;
+        }
+
+        .bubble:hover .menu {
+            display: block; /* Affiche le menu au survol */
+        }
+       .bubble a {
+    text-decoration: none; /* Retire le soulignement */
+    color: inherit; /* Hérite de la couleur du texte parent */
+    background: none; /* Retire le fond */
+}
+#formsend{
+    width: 100%;
+}
+    .chat-input-wrapper {
+            width: 100%;
+            margin: 5px auto;
+            background-color: #ffffff;
+            border-radius: 22px; /* Arrondi du bloc complet */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+           
+           
+        }
+
+        /* Le message tagué (Reply Preview) */
+        .reply-container {
+            background-color: #f0f2f5; /* Gris clair comme sur l'image */
+            margin: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border-left: 4px solid #ff5722; /* La barre orange à gauche */
+            position: relative;
+            display: none;
+            flex-direction: column;
+        }
+
+        .reply-user {
+            color: #ff5722; /* Couleur orange pour le nom */
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+
+        .reply-text {
+            color: #54656f;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; /* Coupe le texte avec "..." */
+        }
+
+        .reply-close {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #54656f;
+        }
+
+        /* Barre de saisie inférieure */
+        .input-row {
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+           
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            color: #54656f;
+            font-size: 22px;
+            cursor: pointer;
+            padding: 0 8px;
+        }
+
+        .txt0 {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 15px;
+            background: transparent;
+            resize: none;
+        }
+
+        .btn-send {
+            background: none;
+            border: none;
+            color: #54656f;
+            cursor: pointer;
+            padding: 8px;
+        }
+        #btn-set-message{
+            border-radius: 500px;
+            background-color: #5e35b1;
+            padding: 7px 7px 3px 10px;
+        }
